@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Your Transformed Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #374151 50%, #3b82f6 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        .button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .preview-text {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+    <script>
+        // Auto-redirect after 3 seconds if user doesn't click
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Your Website Is Ready!</h1>
+        <p>Your portfolio has been transformed into a powerful sales funnel story.</p>
+        
+        <div class="preview-text">
+            <strong>What you'll see:</strong><br>
+            📖 Chapter 1: The Problem (Sarah's struggle)<br>
+            🛤️ Chapter 2: The Journey (Your story)<br>
+            ⚡ Chapter 3: The Solution (Your system)<br>
+            📊 Chapter 4: The Results (Success stories)<br>
+            🎯 Chapter 5: Your Transformation (Call to action)
+        </div>
+        
+        <a href="index.html" class="button">View Your Transformed Website</a>
+        
+        <p style="font-size: 0.9em; opacity: 0.7;">
+            (Auto-redirecting in 5 seconds...)
+        </p>
+    </div>
+</body>
+</html>
