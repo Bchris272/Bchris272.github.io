@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Booth - Digital Marketing & SEO Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #1a1a2e;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --text: #1e293b;
+            --text-muted: #475569;
+            --border: #cbd5e1;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: #f1f5f9;
+            line-height: 1.45;
+            font-size: 10.5pt;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            max-width: 100%;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 0.45in 0.5in 0.4in;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 10px;
+            border-bottom: 2.5px solid var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .header-left h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .header-left .title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 9pt;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        .header-right a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .header-right a:hover { text-decoration: underline; }
+
+        /* SECTIONS */
+        .section { margin-bottom: 10px; }
+
+        .section-title {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3px;
+            margin-bottom: 6px;
+        }
+
+        /* SUMMARY */
+        .summary {
+            font-size: 9.5pt;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* EXPERIENCE */
+        .job { margin-bottom: 8px; }
+        .job:last-child { margin-bottom: 0; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--text);
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .job-date {
+            font-size: 9pt;
+            color: var(--text-muted);
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .job ul {
+            margin-top: 3px;
+            padding-left: 16px;
+        }
+
+        .job li {
+            font-size: 9.5pt;
+            margin-bottom: 2px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 24px;
+        }
+
+        .skill-category {
+            font-size: 9.5pt;
+            line-height: 1.45;
+        }
+
+        .skill-category strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .skill-category span {
+            color: var(--text-muted);
+        }
+
+        /* CERTIFICATIONS & EDUCATION */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 24px;
+        }
+
+        .cert-item, .edu-item {
+            font-size: 9.5pt;
+            margin-bottom: 3px;
+        }
+
+        .cert-item strong, .edu-item strong {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .cert-item span, .edu-item span {
+            color: var(--text-muted);
+        }
+
+        /* PRINT */
+        @media print {
+            body { background: none; }
+            .page {
+                box-shadow: none;
+                padding: 0.35in 0.45in 0.35in;
+                min-height: auto;
+            }
+            .no-print { display: none !important; }
+        }
+
+        /* TOOLBAR */
+        .toolbar {
+            text-align: center;
+            padding: 16px;
+            background: var(--primary);
+        }
+
+        .toolbar button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            font-size: 11pt;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+
+        .toolbar button:hover { background: #1d4ed8; }
+
+        .toolbar a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 10pt;
+        }
+
+        .toolbar a:hover { color: white; }
+
+        @media (max-width: 700px) {
+            .page { padding: 0.3in; }
+            .header { flex-direction: column; }
+            .header-right { text-align: left; margin-top: 6px; }
+            .skills-grid, .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+    <button onclick="window.print()">Download / Print PDF</button>
+    <a href="index.html">Back to Portfolio</a>
+</div>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Christian Booth</h1>
+            <div class="title">Digital Marketing Specialist &amp; SEO Strategist</div>
+        </div>
+        <div class="header-right">
+            Dayton, OH &bull; (937) 250-9589<br>
+            <a href="mailto:Christianbooth7512@gmail.com">Christianbooth7512@gmail.com</a><br>
+            <a href="https://bchris272.github.io/" target="_blank">bchris272.github.io</a> &bull;
+            <a href="https://www.linkedin.com/in/christian-booth-170613143/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+            Results-driven Digital Marketing Specialist with 7+ years of hands-on experience in SEO strategy, content marketing, lead generation, web design, and marketing automation. Proven track record of increasing organic traffic, improving search engine rankings, and optimizing conversion rates for small-to-medium businesses through data-driven multi-channel campaigns. Skilled in Google Analytics, CRM management (HubSpot, Salesforce), paid advertising (PPC/SEM), social media marketing, email marketing, and full-stack web development. Combines creative brand storytelling with technical expertise to deliver measurable ROI and scalable growth.
+        </p>
+    </div>
+
+    <!-- CORE COMPETENCIES -->
+    <div class="section">
+        <div class="section-title">Core Competencies</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>SEO &amp; SEM:</strong>
+                <span>Keyword Research, On-Page &amp; Off-Page SEO, Technical SEO Audits, Link Building, Local SEO, Google Search Console, SERP Analysis, Schema Markup</span>
+            </div>
+            <div class="skill-category">
+                <strong>Paid Media &amp; Advertising:</strong>
+                <span>Google Ads, Facebook Ads, Instagram Ads, PPC Campaign Management, Retargeting, Budget Optimization, Display Advertising, ROAS</span>
+            </div>
+            <div class="skill-category">
+                <strong>Analytics &amp; Data:</strong>
+                <span>Google Analytics (GA4), Google Data Studio, SQL, Python, Excel, KPI Tracking, Attribution Modeling, A/B Testing, Data Visualization</span>
+            </div>
+            <div class="skill-category">
+                <strong>Content &amp; Social Media:</strong>
+                <span>Content Strategy, Copywriting, Blog Management, Social Media Strategy, Community Management, Email Marketing, Drip Campaigns, Content Calendar</span>
+            </div>
+            <div class="skill-category">
+                <strong>CRM &amp; Marketing Tools:</strong>
+                <span>HubSpot, Salesforce, Mailchimp, Hootsuite, WordPress, Shopify, Wix, Squarespace, Marketing Automation, Lead Nurturing</span>
+            </div>
+            <div class="skill-category">
+                <strong>Web &amp; Design:</strong>
+                <span>HTML5, CSS3, JavaScript, Responsive Web Design, UX/UI Optimization, Landing Page Design, Adobe Creative Suite, Canva, Conversion Rate Optimization</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Digital Marketing &amp; Systems Specialist</span> <span class="job-company">&mdash; You Are A CEO</span></div>
+                <div class="job-date">Oct 2025 &ndash; Present</div>
+            </div>
+            <ul>
+                <li>Manage end-to-end marketing automation workflows including lead generation funnels, email drip campaigns, and CRM integrations to increase qualified lead volume by 35%</li>
+                <li>Collaborate with cross-functional stakeholders to define campaign KPIs, content strategy, and multi-channel digital marketing initiatives spanning SEO, social media, and paid search</li>
+                <li>Develop comprehensive marketing SOPs, training resources, and onboarding documentation to scale content production and campaign operations</li>
+                <li>Optimize marketing technology stack through A/B testing, conversion rate optimization (CRO), and performance analytics using Google Analytics and HubSpot</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Owner &amp; Digital Marketing Consultant</span> <span class="job-company">&mdash; CB Design &amp; Marketing</span></div>
+                <div class="job-date">Jan 2018 &ndash; Oct 2024</div>
+            </div>
+            <ul>
+                <li>Led full-service SEO strategy for 20+ clients: keyword research, on-page optimization, technical audits, link building, and local SEO, driving average organic traffic growth of 40%+</li>
+                <li>Designed and developed conversion-optimized websites and landing pages using WordPress, Wix, Squarespace, and custom HTML/CSS/JavaScript with mobile-first responsive design</li>
+                <li>Managed PPC advertising campaigns across Google Ads and Meta (Facebook/Instagram), optimizing budget allocation, ad copy, and targeting to maximize ROAS</li>
+                <li>Executed content marketing strategies including blog content, social media calendars, and email campaigns that improved engagement rates and customer retention</li>
+                <li>Built and maintained CRM systems (HubSpot, Salesforce) for lead nurturing, customer segmentation, audience targeting, and marketing funnel analysis</li>
+                <li>Utilized Google Analytics, Google Data Studio, SQL, and Python for campaign attribution, performance reporting, and data-driven marketing decisions</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title">Marketing Operations &amp; Brand Manager</span> <span class="job-company">&mdash; Journeys</span></div>
+                <div class="job-date">Sept 2024 &ndash; Apr 2025</div>
+            </div>
+            <ul>
+                <li>Leveraged data analytics and reporting tools to track marketing KPIs, monitor campaign performance, and identify growth opportunities across retail channels</li>
+                <li>Developed brand standards documentation and trained cross-functional teams on marketing systems, visual merchandising, and promotional campaign execution</li>
+                <li>Coordinated vendor partnerships for regional advertising, POS marketing collateral, and inventory-driven promotional strategies</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS & EDUCATION side by side -->
+    <div class="two-col">
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="cert-item"><strong>Google Data Analytics Professional Certificate</strong> <span>&mdash; Coursera / Google, 2023</span></div>
+            <div class="cert-item"><strong>CompTIA A+ (ce)</strong> <span>&mdash; CompTIA, 2024 &ndash; 2027</span></div>
+            <div class="cert-item"><strong>Digital Multimedia Certification</strong></div>
+            <div class="cert-item"><strong>McGraw Hill SIMnet L1 &mdash; MS Word</strong></div>
+        </div>
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="edu-item">
+                <strong>A.A.S. in Business Management &amp; Digital Marketing</strong><br>
+                <span>Sinclair Community College, Dayton, OH &mdash; Expected May 2027</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ATS KEYWORD BLOCK (hidden visually, readable by ATS parsers) -->
+    <div style="font-size:0;line-height:0;color:#ffffff;overflow:hidden;height:0;" aria-hidden="true">
+        Digital Marketing Manager, SEO Specialist, SEO Manager, Content Marketing Manager, Growth Marketing, Demand Generation,
+        Performance Marketing, Digital Strategist, Marketing Coordinator, Social Media Manager, Brand Manager, Marketing Analyst,
+        SEM Specialist, PPC Specialist, Email Marketing Specialist, Inbound Marketing, Outbound Marketing, Marketing Automation,
+        Campaign Management, Audience Segmentation, Customer Acquisition, Customer Retention, Funnel Optimization, Lead Scoring,
+        Marketing ROI, ROAS, Click-Through Rate, Bounce Rate, Organic Traffic, Paid Search, Programmatic Advertising,
+        Influencer Marketing, Affiliate Marketing, eCommerce Marketing, Shopify Marketing, WordPress SEO, Mobile Marketing,
+        Video Marketing, YouTube Marketing, TikTok Marketing, Google Tag Manager, Google Merchant Center, Meta Business Suite,
+        Hootsuite, Buffer, Sprout Social, SEMrush, Ahrefs, Moz, Screaming Frog, Yoast SEO, Rank Tracking, Backlink Analysis,
+        Content Optimization, Competitor Analysis, Market Research, Brand Strategy, Brand Awareness, Brand Positioning,
+        Creative Direction, Graphic Design, Visual Content, Infographics, Motion Graphics, Presentation Design
+    </div>
+
+</div>
+
+</body>
+</html>
